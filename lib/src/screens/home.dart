@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sokoni/src/helpers/screen_navigation.dart';
+import 'package:sokoni/src/screens/bag.dart';
 import 'package:sokoni/src/widgets/bottom_navigation_icons.dart';
 import 'package:sokoni/src/widgets/categories.dart';
 import 'package:sokoni/src/widgets/featured_products.dart';
@@ -240,6 +242,9 @@ class _HomePageState extends State<HomePage> {
             ),
 
             BottomNavIcon(
+              onTap: (){
+                changeScreen(context, ShoppingBag());
+              },
               image: "shopping-bag.png",
               name: "Cart",
             ),   
