@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "756494686672",
+    "firebase_url": "https://sokoni-app-5c8d4.firebaseio.com",
+    "project_id": "sokoni-app-5c8d4",
+    "storage_bucket": "sokoni-app-5c8d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756494686672:android:0a6dfc973852adea1901d5",
+        "android_client_info": {
+          "package_name": "com.example.sokoni"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "756494686672-k70r39jbkev944us2uj27sf6l4jtrlj5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYQsJ4c2lKLBKlM2cZdsVoUl2LLur0LUA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "756494686672-k70r39jbkev944us2uj27sf6l4jtrlj5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
