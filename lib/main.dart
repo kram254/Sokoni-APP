@@ -9,7 +9,7 @@ import 'package:firebase_core/firebase_core.dart';
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  //we call our Multiproviders so that our App can recognize the providers we've used.
+  //Multiproviders so that our App can recognize the providers we've used.
 
   runApp(
     MultiProvider(
