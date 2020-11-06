@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:sokoni/src/helpers/screen_navigation.dart';
+import 'package:sokoni/src/screens/Login.dart';
 import 'package:sokoni/src/screens/bag.dart';
 import 'package:sokoni/src/widgets/categories.dart';
 import 'package:sokoni/src/widgets/featured_products.dart';
 import 'package:sokoni/src/widgets/small_floating_button.dart';
+import 'package:sokoni/src/providers/auth.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -13,6 +17,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    final authProvider = Provider.of<AuthProvider>(context);
     return Scaffold(
       
       appBar: AppBar(
@@ -72,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                 borderRadius: BorderRadius.only(bottomRight: Radius.circular(20)),
               ),
               currentAccountPicture: Icon(Icons.person, color: Colors.white, size: 70,), 
-              accountName: Text("Immanuel Ndaliro" ),accountEmail: Text("immanuel@gmail.com")
+              accountName: Text("Immanuel Ndaliro" ),accountEmail: Text("markorlando45@gmail.com")
             ),
 
             ListTile(
@@ -114,9 +119,12 @@ class _HomePageState extends State<HomePage> {
             ),
 
             ListTile(
-              onTap: (){},
-              leading: Icon(Icons.contact_support , color: Colors.red,),
-              title: Text("About Sokoni",)
+              onTap: () {
+                authProvider.signOut();
+                changeScreenReplacement(context, LoginScreen());
+              },
+              leading: Icon(Icons.exit_to_app, color: Colors.red),
+              title: Text( "Log out", style: TextStyle(color: Colors.red, fontWeight:FontWeight.w700,)),
             ),
 
 

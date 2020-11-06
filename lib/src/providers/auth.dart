@@ -10,7 +10,7 @@ class AuthProvider with ChangeNotifier{
   // we're using the methods of the ChangeNotifier class in the AuthProvider class
   FirebaseAuth _auth;
   // ignore: deprecated_member_use
- User _user;
+  User _user;
   Status _status = Status.Uninitialized;// initial status
   UserServices _userServices = UserServices();
   UserModel _userModel;
@@ -22,6 +22,8 @@ class AuthProvider with ChangeNotifier{
 
   // ignore: deprecated_member_use
   User get user => _user;
+
+  
 
   // ignore: non_constant_identifier_names
   final formKey = GlobalKey<FormState>();

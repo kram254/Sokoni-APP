@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class Loading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Center(child: CircularProgressIndicator()),
-      ],
-      
+    return Container(
+      color: Colors.white,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SpinKitWanderingCubes(
+            color: Colors.black,
+            size: 30,
+          )
+        ],
+        
+      ),
     );
   }
 }
