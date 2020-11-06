@@ -115,8 +115,8 @@ class _HomePageState extends State<HomePage> {
 
             ListTile(
               onTap: (){},
-              leading: Icon(Icons.settings, color: Colors.red,),
-              title: Text("Settings",)
+              leading: Icon(Icons.contact_support , color: Colors.red,),
+              title: Text("About Sokoni",)
             ),
 
 
@@ -317,6 +317,11 @@ class _HomePageState extends State<HomePage> {
            SizedBox(
              height: 5,
            ),
+            
+            Padding(
+             padding: const EdgeInsets.all(8.0),
+             child: Text("Liked Foods", style: TextStyle(color: Colors.red, fontSize:15),),
+           ),
 
            Padding(
              padding: const EdgeInsets.all(2),
@@ -350,7 +355,7 @@ class _HomePageState extends State<HomePage> {
                               padding: const EdgeInsets.all(2.0),
                               child: Icon(Icons.star, color: Colors.yellow[900], size:20),
                             ),
-                            Text("4.5"),
+                            Text("4.3"),
                             ],
                           ),
                         ),
