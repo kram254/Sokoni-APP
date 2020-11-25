@@ -77,7 +77,11 @@ class _HomePageState extends State<HomePage> {
                 borderRadius: BorderRadius.only(bottomRight: Radius.circular(20)),
               ),
               currentAccountPicture: Icon(Icons.person, color: Colors.white, size: 70,), 
-              accountName: Text("Immanuel Ndaliro" ),accountEmail: Text("markorlando45@gmail.com")
+              accountName: Text(authProvider.userModel?.name ?? "Username loading...",
+              style: TextStyle(color: Colors.white, fontSize: 17, fontWeight: FontWeight.w600),
+              ),
+              accountEmail: Text(authProvider.userModel?.email ?? "Email loading...",
+              style: TextStyle(color: Colors.white, fontSize: 17, fontWeight: FontWeight.w600),)
             ),
 
             ListTile(
