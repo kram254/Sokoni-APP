@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sokoni/src/providers/auth.dart';
+import 'package:sokoni/src/providers/category.dart';
+import 'package:sokoni/src/providers/user.dart';
 import 'package:sokoni/src/screens/Login.dart';
 import 'package:sokoni/src/screens/home.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -13,9 +14,9 @@ void main() async {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-          create: (context) => AuthProvider.initialize(),
-        )
+        ChangeNotifierProvider(create: (context) => UserProvider.initialize()),
+        ChangeNotifierProvider(create: (context) => CategoryProvider.initialize())
+        
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -33,7 +34,7 @@ void main() async {
 class ScreensController extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final user = Provider.of<AuthProvider>(context);
+    final user = Provider.of<UserProvider>(context);
     switch (user.status) {
       // case Status.Uninitialized:
       //   return Loading();

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sokoni/src/models/products.dart';
 
 class Details extends StatefulWidget {
-final Products products;
+final ProductModel products;
 
  Details({@required this.products});
 

@@ -6,7 +6,7 @@ import 'package:sokoni/src/models/user.dart';
 
 enum Status {Uninitialized, Unauthenticated, Authenticating, Authenticated}
 
-class AuthProvider with ChangeNotifier{
+class UserProvider with ChangeNotifier{
   // we're using the methods of the ChangeNotifier class in the AuthProvider class
   FirebaseAuth _auth;
   // ignore: deprecated_member_use
@@ -35,7 +35,7 @@ class AuthProvider with ChangeNotifier{
 
 
 
- AuthProvider.initialize(): _auth = FirebaseAuth.instance{
+ UserProvider.initialize(): _auth = FirebaseAuth.instance{
     //this listens to the user authentication state the we will do something about once a change is caught
     // ignore: deprecated_member_use
     _auth.onAuthStateChanged.listen(_onStateChanged);

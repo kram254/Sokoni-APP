@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sokoni/src/models/products.dart';
+//import 'package:sokoni/src/models/products.dart';
 
 class ShoppingBag extends StatefulWidget {
   @override
@@ -7,7 +7,7 @@ class ShoppingBag extends StatefulWidget {
 }
 
 class _ShoppingBagState extends State<ShoppingBag> {
-  Products products = Products(name:"Burger", image: "burger2.png", vendor: "KarioFoods", price: 200, wishList: true, rating: 4.4 );
+  
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +62,7 @@ class _ShoppingBagState extends State<ShoppingBag> {
         backgroundColor:  Colors.white,
         body: ListView(
           children:[
-            Padding(
+           /**  Padding(
               padding: const EdgeInsets.all(18.0),
               child: Container(
                 height: 120,
@@ -102,6 +102,7 @@ class _ShoppingBagState extends State<ShoppingBag> {
                 ),
               ),
             )
+            */
           ]
         ),
       

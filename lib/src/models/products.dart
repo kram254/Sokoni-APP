@@ -29,7 +29,7 @@ int _rates;
 //the getters
 String get id => _id;
 String get name => _name;
-double get avgPrice => _price;
+double get price => _price;
 double get rating => _rating;
 String get image => _image;
 String get restaurantId => _restaurantId;

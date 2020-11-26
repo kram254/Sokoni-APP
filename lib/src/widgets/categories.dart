@@ -1,18 +1,54 @@
 import 'package:flutter/material.dart';
 import 'package:sokoni/src/models/category.dart';
-import 'package:sokoni/src/widgets/loading.dart';
-import 'package:transparent_image/transparent_image.dart';
+//import 'package:sokoni/src/widgets/loading.dart';
+//import 'package:transparent_image/transparent_image.dart';
 
-
+List <CategoryModel> categoriesList = [];
 
 class Categories extends StatelessWidget {
-  final Category category;
-
-  const Categories({Key key, this.category}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
+      height: 120,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: categoriesList.length,
+        itemBuilder: (_, index){
+          return Padding (
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                Container(
+                  decoration:
+                  BoxDecoration(color: Colors.white,
+                  boxShadow:[
+                    BoxShadow(
+                      color: Colors.red[50],
+                      offset: Offset(4,6),
+                      blurRadius: 20,
+                    )
+                  ]
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: Image.asset("images/${categoriesList[index].image}") , 
+                    ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(categoriesList[index].name, 
+                style: TextStyle(
+                  color: Colors.black, fontSize: 14),
+                  ),
+              ],
+              ),
+          );
+        },
+        ),
+    );
+    /*** Padding(
       padding: const EdgeInsets.all(6),
       child: Stack(
         children: <Widget>[
@@ -66,5 +102,6 @@ class Categories extends StatelessWidget {
         ],
       ),
     );
+    */
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sokoni/src/helpers/screen_navigation.dart';
-import 'package:sokoni/src/providers/auth.dart';
+import 'package:sokoni/src/providers/user.dart';
 import 'package:sokoni/src/screens/Login.dart';
 import 'package:sokoni/src/screens/home.dart';
 import 'package:sokoni/src/widgets/loading.dart';
@@ -16,7 +16,7 @@ final _key = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
-    final authProvider = Provider.of<AuthProvider>(context);
+    final authProvider = Provider.of<UserProvider>(context);
 
     return Scaffold(
       key: _key,

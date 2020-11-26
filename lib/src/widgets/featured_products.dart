@@ -3,13 +3,7 @@ import 'package:sokoni/src/helpers/screen_navigation.dart';
 import 'package:sokoni/src/models/products.dart';
 import 'package:sokoni/src/screens/details.dart';
 
-List <Products> productList=[
-  Products(name:"Burger", image: "burger2.png", vendor: "KarioFoods", price: 200, wishList: true, rating: 4.4 ),
-  Products(name:"Sandwich", image: "sandwitch.jpg", vendor: "KarioFoods", price: 300, wishList: false, rating: 4.2 ),
-  Products(name:"Nuggets", image: "Nuggets.jpg", vendor: "KarioFoods", price: 500, wishList: false, rating: 4.8 ),
-  Products(name:"Beef", image: "beef.jpg", vendor: "KarioFoods", price: 250, wishList: true, rating: 4.7 ),
-  Products(name:"Fries", image: "chipo.png", vendor: "KarioFoods", price: 300, wishList: true, rating: 4.4 )
-];
+List <ProductModel> productList=[];
 
 class Featured extends StatelessWidget {
   @override
@@ -68,10 +62,11 @@ class Featured extends StatelessWidget {
                             ]
                               ),
 
-                             child: Padding(
+                             /**child: Padding(
                                padding: const EdgeInsets.all(8.0),
                                child: productList[index].wishList ? Icon(Icons.favorite, color: Colors.red, size: 18) :Icon(Icons.favorite_border, color: Colors.red, size: 18),
                              ),
+                             */
                            ),
                          ),
                        ],
